@@ -16,6 +16,6 @@ class Genre < ActiveRecord::Base
   def all_artist_names
     binding.pry
     # return an array of strings containing every musician's name
-    self.songs.uniq {|song| song.artist}
+    songs.uniq {|song| song.artist.name}
   end
 end
